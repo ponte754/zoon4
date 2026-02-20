@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoon - متجر إلكتروني</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/img.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- شريط التنقل العلوي (يشبه يوتيوب) -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <button class="menu-icon" onclick="toggleMenu()">
+                <i class='bx bx-menu'></i>
+            </button>
+            <div class="logo">
+                <i class='bx bxl-youtube'></i>
+                <span>Zoon</span>
+            </div>
+        </div>
+        
+        <div class="navbar-center">
+            <div class="search-bar">
+                <input type="text" placeholder="ابحث عن منتجات...">
+                <button>
+                    <i class='bx bx-search'></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="navbar-right">
+            <button><i class='bx bx-cart'></i></button>
+            <button><i class='bx bx-bell'></i></button>
+            <button><i class='bx bx-user'></i></button>
+        </div>
+    </nav>
+    
+    <!-- القائمة الجانبية (يشبه يوتيوب) -->
+    <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="sidebar-item active">
+            <i class='bx bx-home'></i>
+            <span>الرئيسية</span>
+        </a>
+        <a href="#pro" class="sidebar-item">
+            <i class='bx bx-shopping-bag'></i>
+            <span>المنتجات</span>
+        </a>
+        <a href="#" class="sidebar-item">
+            <i class='bx bx-heart'></i>
+            <span>المفضلة</span>
+        </a>
+        <a href="#" class="sidebar-item">
+            <i class='bx bx-history'></i>
+            <span>سجل الطلبات</span>
+        </a>
+        <div class="sidebar-divider"></div>
+        <a href="#" class="sidebar-item">
+            <i class='bx bx-cog'></i>
+            <span>الإعدادات</span>
+        </a>
+        <a href="#" class="sidebar-item">
+            <i class='bx bx-help-circle'></i>
+            <span>المساعدة</span>
+        </a>
+    </aside>
+    
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+        <h1 class="section-title">منتجاتنا المميزة</h1>
+        
+        <div class="products-grid" id="pro">
+            <!-- المنتج 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class='bx bx-circle'></i>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">سبحة لون ابيض - مصنوعة يدوياً</h3>
+                    <div class="product-price">100 ر.س</div>
+                    <button class="order-button" onclick="openPopup('سبحة لون ابيض')">
+                        <i class='bx bx-shopping-bag'></i>
+                        اطلب الآن
+                    </button>
+                </div>
+            </div>
+            
+            <!-- المنتج 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class='bx bx-circle'></i>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">سبحة لون اسود - فاخرة</h3>
+                    <div class="product-price">100 ر.س</div>
+                    <button class="order-button" onclick="openPopup('سبحة لون اسود')">
+                        <i class='bx bx-shopping-bag'></i>
+                        اطلب الآن
+                    </button>
+                </div>
+            </div>
+            
+            <!-- المنتج 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class='bx bx-circle'></i>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">سبحة خشب زيتون</h3>
+                    <div class="product-price">150 ر.س</div>
+                    <button class="order-button" onclick="openPopup('سبحة خشب زيتون')">
+                        <i class='bx bx-shopping-bag'></i>
+                        اطلب الآن
+                    </button>
+                </div>
+            </div>
+            
+            <!-- المنتج 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class='bx bx-circle'></i>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">سبحة عقيق احمر</h3>
+                    <div class="product-price">200 ر.س</div>
+                    <button class="order-button" onclick="openPopup('سبحة عقيق احمر')">
+                        <i class='bx bx-shopping-bag'></i>
+                        اطلب الآن
+                    </button>
+                </div>
+            </div>
+            <!-- المنتج 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class='bx bx-circle'></i>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">btaata</h3>
+                    <div class="product-price">100 ر.س</div>
+                    <button class="order-button" onclick="openPopup('btata')">
+                        <i class='bx bx-shopping-bag'></i>
+                        اطلب الآن
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- النافذة المنبثقة (تشبه يوتيوب) -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2 class="popup-title">اتمام الطلب</h2>
+                <button class="close-button" onclick="closePoupup()">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+            <div class="popup-body">
+                <form id="FORMS" method="POST">
+                    <input type="hidden" id="productName" name="اسم الطلب">
+                    
+                    <div class="form-group">
+                        <label for="fullName">الاسم الكامل</label>
+                        <input type="text" id="fullName" name="الاسم" placeholder="أدخل اسمك الكامل" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف</label>
+                        <input type="tel" id="phone" name="رقم الهاتف" placeholder="أدخل رقم هاتفك" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="الايميل" placeholder="أدخل بريدك الإلكتروني">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">العنوان الكامل</label>
+                        <input type="text" id="address" name="العنوان" placeholder="أدخل عنوانك الكامل" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quantity">الكمية</label>
+                        <input type="number" id="quantity" name="الكمية" min="1" value="1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes">معلومات إضافية</label>
+                        <textarea id="notes" name="معلومات اضافية" placeholder="أي ملاحظات أو معلومات إضافية..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">
+                        <i class='bx bx-send'></i>
+                        إرسال الطلب
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- التذييل -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>عن Zoon</h3>
+                    <a href="#">متجر زوون هذه المتجر طور بواسطة PonteSoft هذه المتجر يتيح لك شراء اي شيء من الانترنت في سوريا حماة </a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>خدماتنا</h3>
+                    <a href="pontezoon74@gmail.com">الشحن والتوصيل</a>
+                    <a href="pontezoon74@gmail.com">الاستبدال والاسترجاع</a>
+                    <a href="pontezoon74@gmail.com">الدعم الفني</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>اتصل بنا</h3>
+                    <a href="mailto:pontezoon74@gmail.com">pontezoon74@gmail.com</a>
+                    <a href="#">حماة, سوريا</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 جميع الحقوق محفوظة | Zoon - متجر إلكتروني</p>
+                <p>تصميم وتطوير Ponte Soft</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
